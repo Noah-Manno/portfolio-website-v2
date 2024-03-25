@@ -53,24 +53,11 @@ h1 {
     font-size: calc(15vw + 15vh);
     margin-right: auto;
     margin-left: auto;
-    background: -webkit-linear-gradient(var(--blue), var(--purple));
-    background-size: 400% 400%;
+    background: -webkit-linear-gradient(45deg, var(--blue), var(--purple));
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    animation: gradient 7s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 50% 0%;
-    } 50% {
-        background-position: 50% 100%;
-    } 100% {
-        background-position: 50% 0%;
-    }
-    
 }
 
 h2 {
