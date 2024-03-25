@@ -49,7 +49,7 @@ h1 {
     color: var(--yellow);
     font-weight: 900;
     font-size: 60px;
-    flex: 1 0 30%;
+    flex: 1 0 20%;
 }
 
 #bio {
@@ -154,7 +154,7 @@ h2 {
 @keyframes point {
     0% {
         margin-left: 0;
-    } 50% {
+    } 35% {
         margin-left: 50px
     } 100% {
         margin-left: 0;
