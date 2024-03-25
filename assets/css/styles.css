@@ -1,0 +1,162 @@
+:root {
+    --font1: "Roboto Condensed", sans-serif;
+    --font2: "Orbitron", sans-serif;
+    --blue: #004aad;
+    --purple: #cb6ce6;
+    --purple2: #9E5AFF;
+    --yellow: #fff42c;
+}
+
+body {
+    background: var(--blue);
+}
+
+main {
+    background: -webkit-linear-gradient(45deg, var(--blue), var(--purple));
+    overflow: hidden;
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 90vh;
+    margin: 5vh 5vw;
+    }
+
+
+header {
+    flex: 1 1 240px;
+    display: flex;
+    flex-direction: column;
+    animation: fade-in ease 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-family: var(--font2);
+    color: var(--yellow);
+    font-weight: 900;
+    font-size: 60px;
+    flex: 1 0 30%;
+}
+
+#bio {
+    background: white;
+    flex: 1 0 70%;
+    text-align: center;
+    align-content: center;
+    border-radius: 36px;
+}
+
+#bio-text {
+    font-family: var(--font1);
+    color: var(--purple2);
+    font-weight: 700;
+    font-size: 37px;
+    margin: 5%;
+}
+
+#widgets {
+    margin-top: 1rem;
+    flex: 1 1 240px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.widget {
+    margin: 1rem;
+    background-color: white;
+    flex: 1 1 250px;
+    border-radius: 36px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation: drop-in .5s;
+    animation-fill-mode: forwards;
+    transform: translateY(-10%);
+    opacity: 0;
+}
+
+#one {
+    animation-delay: .1s;
+}
+#two {
+    animation-delay: .2s;
+}
+#three {
+    animation-delay: .3s;
+}
+#four {
+    animation-delay: .4s;
+}
+#five {
+    animation-delay: .5s;
+}
+#six {
+    animation-delay: .6s;
+}
+
+@keyframes drop-in {
+    from { 
+        transform: translateY(-10%);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-family: var(--font1);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.widget-icons {
+    width: 120px;
+    height: auto;
+}
+
+.arrow {
+    width: 55px;
+}
+
+@media only screen and (min-width: 560px) {
+    #widgets {
+        flex: 1 0 460px;
+    }
+}
+
+@media only screen and (min-width: 805px) {
+    header {
+        position: sticky;
+        top: 0;
+        height: 90vh;
+    }
+}
+
+@media only screen and (min-width: 965px) {
+    #widgets {
+        flex: 1 0 532.25px;
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+    #widgets {
+        flex: 1 0 770px;
+    }
+}
