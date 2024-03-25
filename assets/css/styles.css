@@ -16,7 +16,7 @@ main {
     overflow: hidden;
 }
 
-.container {
+#container {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -53,16 +53,14 @@ h1 {
 }
 
 #bio {
-    background: white;
-    flex: 1 0 70%;
+    flex: 1 0 60%;
     text-align: center;
-    align-content: center;
     border-radius: 36px;
 }
 
 #bio-text {
     font-family: var(--font1);
-    color: var(--purple2);
+    color: black;
     font-weight: 700;
     font-size: 37px;
     margin: 5%;
@@ -76,8 +74,9 @@ h1 {
 }
 
 .widget {
+    overflow: hidden;
     margin: 1rem;
-    background-color: white;
+    border: 2px solid black;
     flex: 1 1 250px;
     border-radius: 36px;
     min-height: 280px;
@@ -124,15 +123,60 @@ h2 {
     font-family: var(--font1);
     font-size: 40px;
     font-weight: 700;
+    transform: translateY(-150%);
+    transition: transform ease .5s;
 }
 
 .widget-icons {
     width: 120px;
     height: auto;
+    transform: translateY(-150%);
+    transition: transform ease .5s;
 }
 
 .arrow {
     width: 55px;
+    margin-left: 0;
+}
+
+.widget:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.widget:hover .arrow {
+    animation: point 1s ease infinite;
+}
+
+.widget:hover .widget-icons {
+    transform: translateY(0);
+}
+.widget:hover h2 {
+    transform: translateY(0);
+}
+
+@keyframes point {
+    0% {
+        margin-left: 0;
+    } 50% {
+        margin-left: 50px
+    } 100% {
+        margin-left: 0;
+    }
+}
+
+.leave {
+    transform: translateX(0);
+    animation: leave ease 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes leave {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(200%);
+    }
+    
 }
 
 @media only screen and (min-width: 560px) {
@@ -143,8 +187,6 @@ h2 {
 
 @media only screen and (min-width: 805px) {
     header {
-        position: sticky;
-        top: 0;
         height: 90vh;
     }
 }
