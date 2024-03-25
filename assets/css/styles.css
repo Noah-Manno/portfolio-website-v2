@@ -133,6 +133,32 @@ h2 {
 
 .arrow {
     width: 55px;
+    margin-left: 0;
+}
+
+.widget:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.widget:hover .arrow {
+    animation: point 1s ease infinite;
+}
+
+.widget:hover .widget-icons {
+    transform: translateY(0);
+}
+.widget:hover h2 {
+    transform: translateY(0);
+}
+
+@keyframes point {
+    0% {
+        margin-left: 0;
+    } 50% {
+        margin-left: 50px
+    } 100% {
+        margin-left: 0;
+    }
 }
 
 @media only screen and (min-width: 560px) {
