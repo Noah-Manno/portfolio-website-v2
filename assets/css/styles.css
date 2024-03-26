@@ -194,6 +194,11 @@ h2 {
     transform: scale(120%);
 }
 
+#three:hover {
+    cursor: url(../images/musiccursor.png), auto;
+}
+
+
 @keyframes point {
     0% {
         margin-left: 0;

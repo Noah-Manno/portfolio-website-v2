@@ -87,6 +87,31 @@ h3 {
     color: white;
     font-size: 45px;
     font-weight: 100;
+    transform: translateY(0%);
+    transition: transform ease .5s;
+}
+
+.arrow {
+    position: absolute;
+    top: 75%;
+    width: 55px;
+    margin-left: 0;
+    filter: brightness(70%);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.about-icon {
+    transition: opacity ease .2s;
+}
+
+.headshot {
+    position: absolute;
+    z-index: -1;
+    width: 120%;
+    height: auto;
+    opacity: 0;
+    transition: opacity ease .2s;
 }
 
 p {
@@ -197,6 +222,56 @@ h5 {
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 7px 7px 40px black;
     cursor: pointer;
+}
+
+.widget:hover .arrow {
+    animation: point 1s ease infinite;
+}
+
+#about-me:hover .headshot {
+    opacity: .3;
+    transition: opacity ease .5s;
+}
+
+#about-me:hover .about-icon {
+    opacity: 0;
+}
+
+#about-me:hover h3 {
+    transform: translateY(120%);
+}
+
+@keyframes point {
+    0% {
+        margin-right: 0;
+    } 50% {
+        margin-right: 50px
+    } 100% {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 305px) {
+    .headshot {
+        width: 100%;
+        height: auto;
+    }
+}
+@media only screen and (min-width: 560px) {
+    .headshot {
+        width: 140%;
+        height: auto;
+    }
+}
+@media only screen and (min-width: 636px) {
+    .headshot {
+        width: 120%;
+    }
+}
+@media only screen and (min-width: 1210px) {
+    .headshot {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 849px){
