@@ -8,7 +8,7 @@
 }
 
 body {
-    background: var(--blue);
+    background: var(--purple2);
 }
 
 main {
@@ -30,6 +30,8 @@ header {
     flex: 1 1 240px;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    justify-content: center;
     animation: fade-in ease 1.2s;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -45,27 +47,22 @@ header {
 }
 
 h1 {
-    font-family: var(--font2);
-    color: var(--yellow);
-    font-weight: 900;
+    font-family: var(--font1);
+    color: white;
     font-size: 60px;
-    flex: 1 0 20%;
+    font-weight: 100;
 }
 
 #bio {
-    background: white;
-    flex: 1 0 70%;
     text-align: center;
     align-content: center;
-    border-radius: 36px;
 }
 
 #bio-text {
     font-family: var(--font1);
-    color: var(--purple2);
-    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
     font-size: 37px;
-    margin: 5%;
+    font-weight: 200;
 }
 
 #widgets {
@@ -77,9 +74,7 @@ h1 {
 
 .widget {
     margin: 1rem;
-    background-color: white;
     flex: 1 1 250px;
-    border-radius: 36px;
     min-height: 280px;
     display: flex;
     flex-direction: column;
@@ -90,6 +85,8 @@ h1 {
     transform: translateY(-10%);
     opacity: 0;
     overflow: hidden;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 36px;
 }
 
 #one {
@@ -123,8 +120,9 @@ h1 {
 
 h2 {
     font-family: var(--font1);
+    color: white;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 200;
     transform: translateY(-120%);
     transition: transform ease .5s;
 }
@@ -144,7 +142,7 @@ h2 {
 }
 
 .widget:hover {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
 }
 .widget:hover .arrow {
