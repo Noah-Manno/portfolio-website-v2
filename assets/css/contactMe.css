@@ -19,7 +19,7 @@ main {
     flex-wrap: wrap;
     min-height: 90vh;
     margin: 5vh 5vw;
-    }
+}
 
 .widget {
     margin: 1rem;
@@ -40,7 +40,23 @@ main {
 }
 
 #name-box {
-    flex: 1 1 100%;
+    flex: 1 1 500px;
+}
+
+#contact-me {
+    flex: 1 1 250px;
+}
+
+#contact-me-text {
+    flex: 1 1 250px;
+}
+
+#email {
+    flex: 1 1 250px;
+}
+
+#cellphone {
+    flex: 1 1 250px;
 }
 
 h1 {
@@ -56,29 +72,14 @@ h2 {
     font-weight: 200;
 }
 
-#about-me {
-    flex: 1 0 220px;
-}
-
-#about-me-text {
-    flex: 1 0 220px;
-}
-
-.widget-icon {
-    width: 80px;
-    height: auto;
-}
-
-
-#contact-me {
-    flex: 1 1 240px;
-}
-
-#skills-box {
-    flex: 1 1 330px;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.arrow {
+    position: absolute;
+    top: 75%;
+    width: 55px;
+    margin-left: 0;
+    filter: brightness(70%);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 h3 {
@@ -90,27 +91,41 @@ h3 {
     transition: transform ease .5s;
 }
 
-.arrow {
-    position: absolute;
-    top: 75%;
-    width: 55px;
-    margin-left: 0;
-    filter: brightness(70%);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
-.about-icon {
-    transition: opacity ease .2s;
-}
-
-.headshot {
-    position: absolute;
-    z-index: -1;
-    width: 120%;
+.widget-icon {
+    width: 80px;
     height: auto;
+}
+
+.email-arrow {
+    width: 0px;
+    height: auto;
+    transition: width .6s;
+}
+
+.four:hover .email-arrow {
+    width: 80px;
+    height: auto;
+    transition: width .3s;
+}
+
+.clipboard {
+    width: 0px;
+    height: auto;
+    transition: width .6s;
+}
+.five:hover .clipboard {
+    width: 80px;
+    height: auto;
+    transition: width .3s;
+}
+.clipboard-text {
+    font-style: italic; 
+    font-size: 20px;
     opacity: 0;
-    transition: opacity ease .2s;
+    transition: opacity .6s;
+}
+.five:hover .clipboard-text {
+    opacity: 1;
 }
 
 p {
@@ -126,31 +141,17 @@ p {
     color: yellow;
 }
 
-h4 {
+#my-email {
+    font-size: 20px;
+}
+
+#confirmation-clipboard {
     font-family: var(--font1);
-    color: white;
-    font-size: 60px;
     font-weight: 100;
-    flex: 1 1 100%;
+    font-style: italic;
+    color: yellow;
+    visibility: hidden;
 }
-
-.skill {
-    flex: 1 0 30%;
-}
-
-.skill-icons {
-    width: 70px;
-    height: auto;
-    flex: 1 0 100px;
-}
-
-h5 {
-    font-family: var(--font1);
-    color: white;
-    font-size: 30px;
-    font-weight: 100;
-}
-
 
 @keyframes drop-in {
     from { 
@@ -227,19 +228,6 @@ h5 {
     animation: point 1s ease infinite;
 }
 
-#about-me:hover .headshot {
-    opacity: .3;
-    transition: opacity ease .5s;
-}
-
-#about-me:hover .about-icon {
-    opacity: 0;
-}
-
-#about-me:hover h3 {
-    transform: translateY(120%);
-}
-
 @keyframes point {
     0% {
         margin-right: 0;
@@ -250,58 +238,3 @@ h5 {
     }
 }
 
-@media only screen and (min-width: 305px) {
-    .headshot {
-        width: 100%;
-        height: auto;
-    }
-}
-@media only screen and (min-width: 560px) {
-    .headshot {
-        width: 140%;
-        height: auto;
-    }
-}
-@media only screen and (min-width: 636px) {
-    .headshot {
-        width: 120%;
-    }
-}
-
-@media only screen and (min-width: 849px){
-    #about-me {
-        flex: 1 0 350px;
-    }
-    
-    #about-me-text {
-        flex: 1 0 350px;
-    }
-
-    #contact-me {
-        flex: 1 1 250px;
-    }
-    
-    #skills-box {
-        flex: 1 1 450px;
-    }
-}
-
-@media only screen and (min-width: 1163px){
-    #name-box {
-        flex: 1 1 450px;
-    }
-
-    #about-me {
-        flex: 1 0 250px;
-    }
-    
-    #about-me-text {
-        flex: 1 0 250px;
-    }
-}
-
-@media only screen and (min-width: 1210px) {
-    .headshot {
-        width: 100%;
-    }
-}

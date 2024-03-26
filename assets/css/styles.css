@@ -33,7 +33,6 @@ main {
 }
 
 #container {
-    /* overflow: hidden; */
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
