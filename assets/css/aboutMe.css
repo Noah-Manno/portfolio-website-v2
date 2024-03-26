@@ -1,6 +1,5 @@
 :root {
     --font1: "Roboto Condensed", sans-serif;
-    --font2: "Orbitron", sans-serif;
     --blue: #004aad;
     --purple: #cb6ce6;
     --purple2: #9E5AFF;
@@ -139,6 +138,42 @@ h5 {
     }
 }
 
+.swap-gradient {
+    animation: swapGradient ease 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes swapGradient {
+    0% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    } 50% {
+        background-position:100% 100%;
+        background-size: 400% 400%;
+    } 100% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    }
+}
+
+.swipe-left {
+    transform: translateX(0%);
+    animation: swipeLeft ease 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes swipeLeft {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    } 50% {
+        transform: translateX(100%);
+        opacity: 0;
+    } 100% {
+        transform: translateX(200%);
+    }
+}
+
 .one {
     animation-delay: .1s;
 }
@@ -156,6 +191,12 @@ h5 {
 }
 .six {
     animation-delay: .6s;
+}
+
+.widget:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 7px 7px 40px black;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 849px){
