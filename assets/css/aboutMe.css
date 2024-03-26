@@ -41,6 +41,7 @@ main {
 
 #name-box {
     flex: 1 1 100%;
+    box-shadow: none;
 }
 
 h1 {
@@ -92,7 +93,7 @@ h3 {
 
 .arrow {
     position: absolute;
-    top: 75%;
+    top: 77.5%;
     width: 55px;
     margin-left: 0;
     filter: brightness(70%);
@@ -283,6 +284,13 @@ h5 {
 @media only screen and (min-width: 636px) {
     .headshot {
         width: 120%;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    #name-box {
+        flex: 1 1 500px;
+        box-shadow: 5px 5px 20px black;
     }
 }
 
