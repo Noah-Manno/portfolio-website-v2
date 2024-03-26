@@ -1,6 +1,5 @@
 :root {
     --font1: "Roboto Condensed", sans-serif;
-    --font2: "Orbitron", sans-serif;
     --blue: #004aad;
     --purple: #cb6ce6;
     --purple2: #9E5AFF;
@@ -53,10 +52,10 @@ main {
         transform: translateX(0%);
         opacity: 1;
     } 50% {
-        transform: translateX(100%);
+        transform: translateX(-100%);
         opacity: 0;
     } 100% {
-        transform: translateX(200%);
+        transform: translateX(-200%);
     }
 }
 
