@@ -17,7 +17,7 @@ main {
 }
 
 .container {
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -87,6 +87,7 @@ h1 {
     overflow: hidden;
     box-shadow: 5px 5px 20px black;
     border-radius: 36px;
+    transition: box-shadow .5s;
 }
 
 #one {
@@ -139,10 +140,12 @@ h2 {
 .arrow {
     width: 55px;
     margin-left: 0;
+    filter: brightness(150%);
 }
 
 .widget:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 7px 7px 40px black;
     cursor: pointer;
 }
 .widget:hover .arrow {
