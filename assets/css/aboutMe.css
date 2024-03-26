@@ -42,11 +42,7 @@ main {
 }
 
 #name-box {
-    flex: 1 1 450px;
-}
-
-#skills-box {
-    flex: 1 1 450px;
+    flex: 1 1 100%;
 }
 
 h1 {
@@ -63,19 +59,28 @@ h2 {
 }
 
 #about-me {
-    flex: 1 0 250px;
+    flex: 1 0 220px;
+}
+
+#about-me-text {
+    flex: 1 0 220px;
 }
 
 .widget-icon {
     width: 80px;
     height: auto;
 }
-#about-me-text {
-    flex: 1 0 250px;
-}
+
 
 #contact-me {
-    flex: 1 1 250px;
+    flex: 1 1 240px;
+}
+
+#skills-box {
+    flex: 1 1 330px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 h3 {
@@ -98,6 +103,31 @@ p {
     color: yellow;
 }
 
+h4 {
+    font-family: var(--font1);
+    color: white;
+    font-size: 60px;
+    font-weight: 100;
+    flex: 1 1 100%;
+}
+
+.skill {
+    flex: 1 0 30%;
+}
+
+.skill-icons {
+    width: 70px;
+    height: auto;
+    flex: 1 0 100px;
+}
+
+h5 {
+    font-family: var(--font1);
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+}
+
 
 @keyframes drop-in {
     from { 
@@ -106,5 +136,56 @@ p {
     } to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+.one {
+    animation-delay: .1s;
+}
+.two {
+    animation-delay: .2s;
+}
+.three {
+    animation-delay: .3s;
+}
+.four {
+    animation-delay: .4s;
+}
+.five {
+    animation-delay: .5s;
+}
+.six {
+    animation-delay: .6s;
+}
+
+@media only screen and (min-width: 849px){
+    #about-me {
+        flex: 1 0 350px;
+    }
+    
+    #about-me-text {
+        flex: 1 0 350px;
+    }
+
+    #contact-me {
+        flex: 1 1 250px;
+    }
+    
+    #skills-box {
+        flex: 1 1 450px;
+    }
+}
+
+@media only screen and (min-width: 1163px){
+    #name-box {
+        flex: 1 1 450px;
+    }
+
+    #about-me {
+        flex: 1 0 250px;
+    }
+    
+    #about-me-text {
+        flex: 1 0 250px;
     }
 }
