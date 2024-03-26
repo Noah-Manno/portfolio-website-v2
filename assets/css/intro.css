@@ -7,7 +7,7 @@
 }
 
 body {
-    background: var(--blue);
+    background: white
 }
 
 main {
@@ -49,7 +49,7 @@ div {
 h1 {
     text-transform: uppercase;
     font-family: var(--font1);
-    font-weight: 900;
+    font-weight: 500;
     font-size: calc(15vw + 15vh);
     margin-right: auto;
     margin-left: auto;
@@ -78,5 +78,4 @@ h2 {
     font-weight: 900;
     font-size: calc(3vw + 3vh);
     margin-top: 100px;
-    color: var(--purple2);
 }
