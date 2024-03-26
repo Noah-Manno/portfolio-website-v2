@@ -89,6 +89,7 @@ h1 {
     animation-fill-mode: forwards;
     transform: translateY(-10%);
     opacity: 0;
+    overflow: hidden;
 }
 
 #one {
@@ -124,11 +125,17 @@ h2 {
     font-family: var(--font1);
     font-size: 40px;
     font-weight: 700;
+    transform: translateY(-120%);
+    transition: transform ease .5s;
 }
 
 .widget-icons {
     width: 120px;
     height: auto;
+    transform: translateY(40%);
+    opacity: .08;
+    transition: opacity ease .5s;
+    transition: transform ease .5s;
 }
 
 .arrow {
@@ -143,18 +150,19 @@ h2 {
 .widget:hover .arrow {
     animation: point 1s ease infinite;
 }
-
 .widget:hover .widget-icons {
     transform: translateY(0);
+    opacity: 1;
 }
 .widget:hover h2 {
     transform: translateY(0);
+    transform: scale(120%);
 }
 
 @keyframes point {
     0% {
         margin-left: 0;
-    } 35% {
+    } 50% {
         margin-left: 50px
     } 100% {
         margin-left: 0;
