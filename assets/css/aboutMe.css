@@ -1,0 +1,110 @@
+:root {
+    --font1: "Roboto Condensed", sans-serif;
+    --font2: "Orbitron", sans-serif;
+    --blue: #004aad;
+    --purple: #cb6ce6;
+    --purple2: #9E5AFF;
+}
+
+body {
+    background: var(--purple);
+}
+
+main {
+    background: -webkit-linear-gradient(45deg, var(--blue), var(--purple));
+    overflow: hidden;
+}
+
+#container {
+    /* overflow: hidden; */
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
+    margin: 5vh 5vw;
+    }
+
+.widget {
+    margin: 1rem;
+    min-height: 280px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10%);
+    opacity: 0;
+    animation: drop-in .5s;
+    animation-fill-mode: forwards;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 36px;
+    transition: box-shadow .5s;
+    overflow: hidden;
+}
+
+#name-box {
+    flex: 1 1 450px;
+}
+
+#skills-box {
+    flex: 1 1 450px;
+}
+
+h1 {
+    font-family: var(--font1);
+    color: white;
+    font-size: 60px;
+    font-weight: 100;
+}
+h2 {
+    font-family: var(--font1);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 37px;
+    font-weight: 200;
+}
+
+#about-me {
+    flex: 1 0 250px;
+}
+
+.widget-icon {
+    width: 80px;
+    height: auto;
+}
+#about-me-text {
+    flex: 1 0 250px;
+}
+
+#contact-me {
+    flex: 1 1 250px;
+}
+
+h3 {
+    font-family: var(--font1);
+    color: white;
+    font-size: 45px;
+    font-weight: 100;
+}
+
+p {
+    font-family: var(--font1);
+    color: white;
+    font-size: 25px;
+    font-weight: 100;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.highlight {
+    color: yellow;
+}
+
+
+@keyframes drop-in {
+    from { 
+        transform: translateY(-10%);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -4,11 +4,10 @@
     --blue: #004aad;
     --purple: #cb6ce6;
     --purple2: #9E5AFF;
-    --yellow: #fff42c;
 }
 
 body {
-    background: var(--purple2);
+    background: var(--purple);
 }
 
 main {
@@ -16,7 +15,25 @@ main {
     overflow: hidden;
 }
 
-.container {
+.swap-gradient {
+    animation: swapGradient ease 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes swapGradient {
+    0% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    } 50% {
+        background-position:100% 100%;
+        background-size: 400% 400%;
+    } 100% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    }
+}
+
+#container {
     /* overflow: hidden; */
     display: flex;
     flex-wrap: wrap;
@@ -24,6 +41,24 @@ main {
     min-height: 90vh;
     margin: 5vh 5vw;
     }
+
+.swipe-right {
+    transform: translateX(0%);
+    animation: swipeRight ease 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes swipeRight {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    } 50% {
+        transform: translateX(100%);
+        opacity: 0;
+    } 100% {
+        transform: translateX(200%);
+    }
+}
 
 
 header {
