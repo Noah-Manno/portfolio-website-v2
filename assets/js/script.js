@@ -1,5 +1,6 @@
 const aboutMe = document.getElementById('one')
 const contactMe = document.getElementById('six')
+const myProjects = document.getElementById('two')
 const bioText = document.getElementById('bio-text')
 
 bioText.textContent = '<Web Developer/>'
@@ -16,6 +17,16 @@ setTimeout(function(){
 }, 2000);
 
 });
+
+myProjects.addEventListener('click', function() {
+    mainEl.classList.add('swap-gradient');
+    containerEl.classList.add('swipe-right');
+    
+    setTimeout(function(){
+        window.location.href = 'projects.html';
+    }, 2000);
+    
+    });
 
 contactMe.addEventListener('click', function() {
     mainEl.classList.add('swap-gradient');
