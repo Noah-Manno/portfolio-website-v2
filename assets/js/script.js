@@ -27,3 +27,16 @@ contactMe.addEventListener('click', function() {
     
 });   
 
+const openBodyTag = document.getElementById('body-tag')
+const openMainTag = document.getElementById('main-tag')
+const openhTag = document.getElementById('h1-tag')
+const explanationTag = document.getElementById('explanation')
+const endMainTag = document.getElementById('end-main-tag')
+const endBodyTag = document.getElementById('end-body-tag')
+
+openBodyTag.textContent = '<body>'
+openMainTag.textContent = '<main>'
+openhTag.textContent = '<h1> Noah Manno <h1>'
+explanationTag.textContent = '<p> A passionate web developer who makes pixel perfect web interfaces. <p>'
+endMainTag.textContent = '</main>'
+endBodyTag.textContent = '</body>'

@@ -101,6 +101,54 @@ h1 {
     font-weight: 200;
 }
 
+#extra-code {
+    height: 0;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font1);
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+#body-tag {
+    margin-left: 40px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#main-tag {
+    margin-left: 60px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: .2s;
+}
+#h1-tag {
+    margin-left: 80px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: .4s;
+}
+#explanation {
+    margin-left: 100px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: .6s;
+}
+#end-main-tag {
+    margin-left: 60px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: .8s;
+}
+#end-body-tag {
+    margin-left: 40px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1s;
+}
+
+
+
 #widgets {
     margin-top: 1rem;
     flex: 1 1 240px;
@@ -222,6 +270,25 @@ h2 {
         position: sticky;
         top: 0;
         height: 90vh;
+    }
+
+    header:hover #body-tag{
+        opacity: 1;
+    }
+    header:hover #main-tag{
+        opacity: 1;
+    }
+    header:hover #h1-tag{
+        opacity: 1;
+    }
+    header:hover #explanation{
+        opacity: 1;
+    }
+    header:hover #end-main-tag{
+        opacity: 1;
+    }
+    header:hover #end-body-tag{
+        opacity: 1;
     }
 }
 
