@@ -12,6 +12,8 @@ body {
 main {
     background: -webkit-linear-gradient(45deg, var(--blue), var(--purple));
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 #container {
@@ -19,6 +21,7 @@ main {
     flex-wrap: wrap;
     min-height: 90vh;
     margin: 5vh 5vw;
+    max-width: 1377px;
 }
 
 .widget {
@@ -193,10 +196,10 @@ p {
         transform: translateX(0%);
         opacity: 1;
     } 50% {
-        transform: translateX(100%);
+        transform: translateX(125%);
         opacity: 0;
     } 100% {
-        transform: translateX(200%);
+        transform: translateX(250%);
     }
 }
 
