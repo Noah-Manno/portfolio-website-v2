@@ -111,43 +111,105 @@ h1 {
     line-height: 1.3;
 }
 
-#body-tag {
-    margin-left: 40px;
+.above {
+    position: relative;
+    bottom: 230px
+}
+
+.below {
+    position: relative;
+    top: 30px
+}
+
+#html-tag {
+    margin-left: 20px;
     opacity: 0;
     transition: opacity 1s;
 }
-#main-tag {
+
+#head-tag {
+    margin-left: 40px;
+    opacity:0;
+    transition: opacity 1s;
+    transition-delay: .1s;
+}
+
+#title {
     margin-left: 60px;
     opacity: 0;
     transition: opacity 1s;
     transition-delay: .2s;
 }
-#h1-tag {
-    margin-left: 80px;
+
+#head-tag-close {
+    margin-left: 40px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: .3s;
+}
+
+#body-tag {
+    margin-left: 40px;
     opacity: 0;
     transition: opacity 1s;
     transition-delay: .4s;
 }
-#explanation {
-    margin-left: 100px;
+
+#header-tag {
+    margin-left: 60px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: .5s;
+}
+
+#web-dev-tag {
+    margin-left: 80px;
     opacity: 0;
     transition: opacity 1s;
     transition-delay: .6s;
 }
-#end-main-tag {
+
+#header-tag-close {
+    margin-left: 60px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: .7s;
+}
+
+#main-tag {
     margin-left: 60px;
     opacity: 0;
     transition: opacity 1s;
     transition-delay: .8s;
 }
-#end-body-tag {
-    margin-left: 40px;
+
+#p-tag {
+    margin-left: 80px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: .9s;
+}
+
+#main-tag-close {
+    margin-left: 60px;
     opacity: 0;
     transition: opacity 1s;
     transition-delay: 1s;
 }
 
+#body-tag-close {
+    margin-left: 40px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1.1s;
+}
 
+#html-tag-close {
+    margin-left: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1.2s;
+}
 
 #widgets {
     margin-top: 1rem;
@@ -272,22 +334,107 @@ h2 {
         height: 90vh;
     }
 
-    header:hover #body-tag{
+    #html-tag {
+        opacity: .05;
+    }
+    
+    #head-tag {
+        opacity: .05;
+    }
+    
+    #title {
+        opacity: .06;
+    }
+    
+    #head-tag-close {
+        opacity: .07;
+    }
+    
+    #body-tag {
+        opacity: .08;
+    }
+    
+    #header-tag {
+        opacity: .09;
+    }
+    
+    #web-dev-tag {
+        opacity: .1;
+    }
+    
+    #header-tag-close {
+        opacity: .1;
+    }
+    
+    #main-tag {
+        opacity: .09;
+    }
+    
+    #p-tag {
+        opacity: .08;
+    }
+    
+    #main-tag-close {
+        opacity: .08;
+    }
+    
+    #body-tag-close {
+        opacity: .07;
+    }
+    
+    #html-tag-close {
+        opacity: .05;
+    }
+
+    header:hover #html-tag {
+        opacity: 0;
+    }
+    
+    header:hover #head-tag {
         opacity: 1;
     }
-    header:hover #main-tag{
+    
+    header:hover #title {
         opacity: 1;
     }
-    header:hover #h1-tag{
+    
+    header:hover #head-tag-close {
         opacity: 1;
     }
-    header:hover #explanation{
+    
+    header:hover #body-tag {
         opacity: 1;
     }
-    header:hover #end-main-tag{
+    
+    header:hover #header-tag {
         opacity: 1;
     }
-    header:hover #end-body-tag{
+    
+    header:hover #web-dev-tag {
+        opacity: 1;
+    }
+    
+    header:hover #header-tag-close {
+        opacity: 1;
+    }
+    
+    header:hover #main-tag {
+        opacity: 1;
+    }
+    
+    header:hover #p-tag {
+        opacity: 1;
+    }
+    
+    header:hover #main-tag-close {
+        opacity: 1;
+    }
+    
+    header:hover #body-tag-close {
+        opacity: 1;
+    }
+    
+    header:hover #html-tag-close {
         opacity: 1;
     }
 }
@@ -301,5 +448,11 @@ h2 {
 @media only screen and (min-width: 1150px) {
     #widgets {
         flex: 1 0 770px;
+    }
+}
+
+@media only screen and (min-width: 1318px) {
+    #widgets {
+        max-height: 770px;
     }
 }
