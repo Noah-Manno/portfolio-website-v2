@@ -1,0 +1,231 @@
+:root {
+    --font1: "Roboto Condensed", sans-serif;
+    --blue: #004aad;
+    --purple: #cb6ce6;
+    --purple2: #9E5AFF;
+}
+
+body {
+    background: var(--purple);
+}
+
+main {
+    background: -webkit-linear-gradient(45deg, var(--blue), var(--purple));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
+    margin: 5vh 5vw;
+    max-width: 1377px;
+}
+
+.widget {
+    margin: 1rem;
+    min-height: 280px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10%);
+    opacity: 0;
+    animation: drop-in .5s;
+    animation-fill-mode: forwards;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 36px;
+    transition: box-shadow .5s;
+    overflow: hidden;
+}
+
+.widget-icon {
+    width: 80px;
+    height: auto;
+}
+.skill-icon {
+    width: 50px;
+    height: auto;
+}
+
+.skills-used {
+    margin-top: 20px;
+}
+
+.project-screenshot {
+    position: absolute;
+    z-index: -1;
+    width: 160%;
+    height: auto;
+    opacity: 0;
+    transition: opacity ease .2s;
+}
+
+.project-box:hover .project-screenshot{
+    opacity: .2;
+    transition: opacity ease .5s;
+}
+
+#name-box {
+    flex: 1 1 100%;
+    box-shadow: none;
+}
+
+#my-projects {
+    flex: 1 1 250px;
+}
+
+.project-box {
+    flex: 1 1 250px;
+}
+
+#contact-me {
+    flex: 1 1 240px;
+}
+
+h1 {
+    font-family: var(--font1);
+    color: white;
+    font-size: 60px;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: var(--font1);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 37px;
+    font-weight: 200;
+}
+
+h3 {
+    font-family: var(--font1);
+    color: white;
+    font-size: 45px;
+    font-weight: 100;
+    transform: translateY(0%);
+    transition: transform ease .5s;
+}
+
+.arrow {
+    position: absolute;
+    top: 77.5%;
+    width: 55px;
+    margin-left: 0;
+    filter: brightness(70%);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+@keyframes drop-in {
+    from { 
+        transform: translateY(-10%);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.swap-gradient {
+    animation: swapGradient ease 2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes swapGradient {
+    0% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    } 50% {
+        background-position:100% 100%;
+        background-size: 400% 400%;
+    } 100% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    }
+}
+
+.swipe-left {
+    transform: translateX(0%);
+    animation: swipeLeft ease 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes swipeLeft {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    } 50% {
+        transform: translateX(125%);
+        opacity: 0;
+    } 100% {
+        transform: translateX(250%);
+    }
+}
+
+.swipe-down {
+    transform: translateY(0%);
+    animation: swipeDown ease 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes swipeDown {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    } 50% {
+        transform: translateY(-100%);
+        opacity: 0;
+    } 100% {
+        transform: translateY(-200%);
+    }
+}
+
+.one {
+    animation-delay: .1s;
+}
+.two {
+    animation-delay: .2s;
+}
+.three {
+    animation-delay: .3s;
+}
+.four {
+    animation-delay: .4s;
+}
+.five {
+    animation-delay: .5s;
+}
+.six {
+    animation-delay: .6s;
+}
+
+.widget:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 7px 7px 40px black;
+    cursor: pointer;
+}
+
+.widget:hover .arrow {
+    animation: point 1s ease infinite;
+}
+
+@keyframes point {
+    0% {
+        margin-right: 0;
+    } 50% {
+        margin-right: 50px
+    } 100% {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    #name-box {
+        flex: 1 1 500px;
+        box-shadow: 5px 5px 20px black;
+    }
+}
