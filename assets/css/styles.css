@@ -387,7 +387,7 @@ h2 {
     }
 
     header:hover #html-tag {
-        opacity: 0;
+        opacity: 1;
     }
     
     header:hover #head-tag {
