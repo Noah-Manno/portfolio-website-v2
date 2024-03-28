@@ -32,6 +32,10 @@ if (isFadingIn) {
 setTimeout(function(){
     title.classList.add('drop-in')
     subtitle.classList.add('drop-in');
+    setTimeout(function(){
+        title.classList.remove('hidden')
+        title.classList.remove('drop-in')
+    }, 1000);
 
     container.addEventListener('click', function() {
         container.classList.add('zoom-away');

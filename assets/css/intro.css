@@ -93,8 +93,6 @@ overflow: hidden;
 }
 
 h1 {
-    opacity: 0;
-    transform: translateY(-10%);
     text-transform: uppercase;
     font-family: var(--font1);
     font-weight: 900;
@@ -110,6 +108,10 @@ h1 {
     animation: gradient 7s ease infinite;
 }
 
+.hidden {
+    opacity: 0;
+}
+
 @keyframes gradient {
     0% {
         background-position: 50% 0%;
@@ -123,7 +125,6 @@ h1 {
 
 h2 {
     opacity: 0;
-    transform: translateY(-10%);
     font-family: var(--font1);
     font-weight: 100;
     font-size: calc(3vw + 3vh);
@@ -137,10 +138,8 @@ h2 {
 
 @keyframes drop-in {
     from {
-        transform: translateY(-10%);
         opacity: 0;
     } to {
-        transform: translateY(0%);
         opacity: 1;
     }
 }
