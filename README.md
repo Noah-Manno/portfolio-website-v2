@@ -29,3 +29,4 @@ Please refer to the LICENSE in the repo.
 ## Deployment
 
 Github Repository: https://github.com/Noah-Manno/portfolio-website-v2
+Deployed Webpage: https://noah-manno.github.io/portfolio-website-v2/
