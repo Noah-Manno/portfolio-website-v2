@@ -140,6 +140,7 @@ h2 {
     animation-fill-mode: forwards;
 }
 
+
 .second {
     opacity: 0;
     animation: flicker-in .8s;
