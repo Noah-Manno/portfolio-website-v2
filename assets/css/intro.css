@@ -115,9 +115,12 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+}
+
+.out {
     animation: out ease 1s;
     animation-fill-mode: forwards;
-    animation-delay: 2.5s;
 }
 
 @keyframes out {
@@ -133,38 +136,19 @@ h2 {
     width: 150px;
 }
 
-.first {
-    opacity: 0;
-    animation: flicker-in .8s;
-    animation-fill-mode: forwards;
+#first {
+    visibility: hidden;
+}
+#second {
+    visibility: hidden;
+}
+#third {
+    visibility: hidden;
+}
+#forth {
+    visibility: hidden;
 }
 
-
-.second {
-    opacity: 0;
-    animation: flicker-in .5s;
-    animation-fill-mode: forwards;
-    animation-delay: .5s;
-}
-
-.third {
-    opacity: 0;
-    animation: flicker-in .5s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-
-.forth {
-    opacity: 0;
-    animation: flicker-in .5s;
-    animation-fill-mode: forwards;
-    animation-delay: 1.5s;
-}
-
-@keyframes flicker-in {
-    0% {
-        opacity: 0;
-    } 100% {
-        opacity: 1;
-    }
+.visible {
+    visibility: visible;
 }
