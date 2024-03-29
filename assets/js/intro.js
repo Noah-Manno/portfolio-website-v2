@@ -38,7 +38,7 @@ setTimeout(function(){
     container.addEventListener('click', function() {
         container.classList.add('zoom-away');
         setTimeout(function(){
-            window.location.href = 'index.html';
+            window.location.href = 'home.html';
         }, 2000);
     });
 }, 3700);

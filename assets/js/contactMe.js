@@ -10,7 +10,7 @@ nameEl.addEventListener('click', function() {
     containerEl.classList.add('swipe-left')
 
     setTimeout(function(){
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
     }, 2000);
 
 });
