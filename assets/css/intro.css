@@ -143,21 +143,21 @@ h2 {
 
 .second {
     opacity: 0;
-    animation: flicker-in .8s;
+    animation: flicker-in .5s;
     animation-fill-mode: forwards;
     animation-delay: .5s;
 }
 
 .third {
     opacity: 0;
-    animation: flicker-in .8s;
+    animation: flicker-in .5s;
     animation-fill-mode: forwards;
     animation-delay: 1s;
 }
 
 .forth {
     opacity: 0;
-    animation: flicker-in .8s;
+    animation: flicker-in .5s;
     animation-fill-mode: forwards;
     animation-delay: 1.5s;
 }
