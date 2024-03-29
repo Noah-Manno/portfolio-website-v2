@@ -1,4 +1,3 @@
-const welcome = document.getElementById('welcome')
 let spinner = document.getElementById('absolute');
 let opacity = 0;
 let isFadingIn = true;
@@ -14,7 +13,6 @@ let fade = setInterval(() => {
     } else {
         setTimeout(function(){
             if (opacity > 0) {
-                welcome.classList.add('fade-out')
                 spinner.style.opacity = opacity;
                 opacity -= 0.01;
             } else {
@@ -22,7 +20,7 @@ let fade = setInterval(() => {
             }
         }, 200);
     }
-}, 10);
+}, 15);
 
 const container = document.getElementById('container');
 const title = document.getElementById('title');
@@ -35,7 +33,7 @@ setTimeout(function(){
     setTimeout(function(){
         title.classList.remove('hidden')
         title.classList.remove('drop-in')
-    }, 1000);
+    }, 1700);
 
     container.addEventListener('click', function() {
         container.classList.add('zoom-away');
@@ -43,7 +41,7 @@ setTimeout(function(){
             window.location.href = 'index.html';
         }, 2000);
     });
-}, 3000);
+}, 3700);
 }
 
 
