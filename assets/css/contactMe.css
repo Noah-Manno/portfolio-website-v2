@@ -20,7 +20,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     min-height: 90vh;
-    margin: 5vh 5vw;
+    margin: 0vh 5vw 5vh 5vw;
     max-width: 1377px;
 }
 
@@ -45,6 +45,9 @@ main {
 #name-box {
     flex: 1 1 500px;
     box-shadow: none;
+    justify-content: flex-start;
+    min-height: fit-content;
+    padding: 20px;
 }
 
 #contact-me {
@@ -81,10 +84,16 @@ h2 {
     top: 77.5%;
     width: 55px;
     margin-left: 0;
-    filter: brightness(70%);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+
+.title-arrow {
+    position: relative;
+    top: 0;
+    padding-top: 0px;
+}
+
 
 h3 {
     font-family: var(--font1);
@@ -242,9 +251,22 @@ p {
     }
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 627px) {
     #name-box {
         flex: 1 1 500px;
         box-shadow: 5px 5px 20px black;
+        justify-content: center;
+        min-height: 280px;
+        padding: 0px;
+    }
+
+    #container {
+        margin: 5vh 5vw;
+    }
+
+    .title-arrow {
+        position: absolute;
+        top: 77.5%;
+        padding-top: 0px;
     }
 }
