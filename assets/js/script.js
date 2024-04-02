@@ -35,7 +35,6 @@ contactMe.addEventListener('click', function() {
     setTimeout(function(){
         window.location.href = 'contactMe.html';
     }, 2000);
-    
 });   
 
 const htmlTag = document.getElementById('html-tag')
